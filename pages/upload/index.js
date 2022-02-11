@@ -6,7 +6,7 @@ export default function Home() {
     const onDrop = useCallback(acceptedFiles => {
         // Do something with the files
       }, [])
-      const {getRootProps, getInputProps, isDragActive} = useDropzone({accept: 'image/jpeg,image/png'})
+      const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop, accept: 'image/jpeg,image/png'})
   return (
     <div className={styles.uploaderContainer}>
         <div className={styles.uploadSection}>
